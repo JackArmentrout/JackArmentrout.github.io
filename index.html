@@ -11,9 +11,15 @@ if document.cookie.indexOf("username") <0 ){
   alert("my cookie: " + document.cookie);
 </script>
 </head>
-
-<body>
-  
+<script>
+  function startTime() {
+    document.getElementById('clock').innerHTML = new Date();
+    setTimeout(startTime, 500);
+  }
+</script>
+<body onload="startTime()">
+<br>
+  Current time: <div id="clock"></div>
   <p style="text-align:center"><b>Jack Armentrout ISSec Lab 2019</b></p>
 This page was created by Jack Armentrout as part of 2019 summer research for the Intelligent Systems Security Lab.
   <p><img src="https://isseclab-udayton.github.io/images/jack.jpg" alt="picture of me" style="width:250px;height:250px;"></p>
